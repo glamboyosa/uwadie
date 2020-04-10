@@ -1,5 +1,5 @@
-function Uwadie() {
-  function getPreformattedTime(options) {
+function Uwadie(options, callback) {
+  function getPreformattedTime(options, callback) {
     const defaults = {
       setTimestamp: true,
     };
@@ -21,8 +21,11 @@ function Uwadie() {
         : ''
     }`}`;
     // remember to return here
-    console.log(preformattedTime);
+
+    callback(preformattedTime);
   }
-  getPreformattedTime({ setTimestamp: false });
+  getPreformattedTime(options, callback);
 }
-Uwadie();
+Uwadie({}, (preformattedTime) => {
+  console.log(preformattedTime);
+});

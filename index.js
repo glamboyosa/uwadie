@@ -29,8 +29,8 @@
         }:${
           /^[0-9]/.test(new Date().getMinutes()) &&
           new Date().getMinutes().length === 1
-            ? '0' + new Date().getMinutes()
-            : new Date().getMinutes()
+            ? new Date().getMinutes()
+            : '0' + new Date().getMinutes()
         }${
           newDefaults.setTimestamp
             ? new Date().getHours() >= '12'
@@ -52,3 +52,5 @@
     return UwadieConstructor;
   }
 );
+const getTime = new Uwadie();
+getTime.getPreformattedTime({}, (time) => console.log(time));

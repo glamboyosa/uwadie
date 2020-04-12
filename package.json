@@ -1,6 +1,6 @@
 {
   "name": "uwadie",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A package that returns the preformatted time",
   "main": "index.js",
   "scripts": {
